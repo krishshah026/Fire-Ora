@@ -581,6 +581,18 @@
      bottom: -150px;
  }
 
+@media (min-width: 1200px) {
+  .core-service-cards {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+  .core-service-card {
+    flex: 1;
+    max-width: 32%;
+  }
+}
+
  /* Video Section */
  .video-background-section {
      position: relative;
