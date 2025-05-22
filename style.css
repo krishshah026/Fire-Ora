@@ -1527,3 +1527,34 @@ html {
      bottom: 85px;
      border: 5px solid #2c2c2e;
  }
+
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(82, 205, 36, 0.15);
+  backdrop-filter: blur(10px);
+  color: #52cd24;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+#backToTop i {
+  font-size: 20px;
+  line-height: 1;
+}
+
+#backToTop:hover {
+  transform: scale(1.1);
+  background: rgba(82, 205, 36, 0.3);
+  box-shadow: 0 0 25px #52cd24aa;
+}
+
