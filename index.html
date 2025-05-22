@@ -484,6 +484,32 @@
 
         window.addEventListener('scroll', animateOnScroll);
         window.addEventListener('load', animateOnScroll);
+
+
+         // === Highlight Active Nav Item ===
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".desktop-nav a, .mobile-menu a");
+
+  function activateNavLink() {
+    let currentScroll = window.scrollY + 110; // 110px offset for sticky header
+
+    sections.forEach((section) => {
+      const top = section.offsetTop;
+      const height = section.offsetHeight;
+
+      if (currentScroll >= top && currentScroll < top + height) {
+        const id = section.getAttribute("id");
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${id}`) {
+            link.classList.add("active");
+          }
+        });
+      }
+    });
+  }
+
+  window.addEventListener("scroll", activateNavLink);
     </script>
 </body>
 </html>
