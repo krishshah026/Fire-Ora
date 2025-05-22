@@ -420,9 +420,9 @@
         </div>
     </footer>
 
-    <button id="backToTop" title="Back to Top">
-      <i class="fas fa-chevron-up"></i>
-    </button>
+   <button id="backToTop" title="Back to Top">
+  <i class="fas fa-chevron-up"></i>
+</button>
 
     <script>
         // Mobile menu toggle
@@ -517,17 +517,22 @@
 
   window.addEventListener("scroll", activateNavLink);
 
-        window.addEventListener("scroll", () => {
-  if (window.scrollY > 400) {
-    backToTopBtn.style.display = "block";
-  } else {
-    backToTopBtn.style.display = "none";
-  }
-});
+      const backToTopBtn = document.getElementById("backToTop");
 
-backToTopBtn.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 400) {
+      backToTopBtn.style.display = "flex";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
     </script>
 </body>
 </html>
